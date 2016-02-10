@@ -5,19 +5,9 @@
        http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
        http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd">
 
-  <bean id="helloBean" class="com.budiana.irpan.belajar.HelloBean">
-      <property name="say" value="Hi from Camel"/>
-  </bean>
 
   <camelContext xmlns="http://camel.apache.org/schema/blueprint">
-    <route id="timerToLog">
-      <from uri="timer:foo?period=5000"/>
-      <setBody>
-          <method ref="helloBean" method="hello"/>
-      </setBody>
-      <log message="The message contains ${body}"/>
-      <to uri="mock:result"/>
-    </route>
-  </camelContext>
+  <route/>
+</camelContext>
 
 </blueprint>
