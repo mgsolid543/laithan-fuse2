@@ -7,7 +7,14 @@
 
 
   <camelContext xmlns="http://camel.apache.org/schema/blueprint">
-  <route/>
+  <route>
+    <from uri="file:myxml?delete=true"/>
+    <log message="${in.header.CamelFileName} with content -&gt; ${body}"/>
+    <setHeader headerName="CamelFileName">
+      <simple>${date:now:yyyyMMddhhmmss}-read.xml</simple>
+    </setHeader>
+    <to uri="file:donexml"/>
+  </route>
 </camelContext>
 
 </blueprint>
