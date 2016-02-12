@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Red Hat Stock Exchange and Trading System -->
+<stocktrading>
+	<name>Irpan Budiana</name>
+	<custId>A123456789</custId>
+	<vip>1</vip>
+	<stockId>ABC</stockId>
+	<shares>11</shares>
+</stocktrading>

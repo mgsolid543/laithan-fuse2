@@ -6,10 +6,10 @@
        http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd">
 
 
-  <camelContext xmlns="http://camel.apache.org/schema/blueprint">
+  <camelContext id="context-fc0ad00f-269a-4d5c-a3f0-d47110ee4e75" xmlns="http://camel.apache.org/schema/blueprint">
   <route>
     <from uri="file:myxml?delete=true"/>
-    <log message="${in.header.CamelFileName} with content -&gt; ${body}"/>
+    <log message="${in.header.CamelFileName} with content -&gt; ${body}" id="log1"/>
     <setHeader headerName="CamelFileName">
       <simple>${date:now:yyyyMMddhhmmss}-read.xml</simple>
     </setHeader>
